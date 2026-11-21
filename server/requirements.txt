@@ -1,0 +1,21 @@
+# Web服务
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# MySQL 同步，如果你想用异步就换成 aiomysql
+pymysql>=1.1.0
+sqlalchemy>=2.0.0
+
+# LangChain 外部API调用
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-openai>=0.1.0
+
+# 环境变量、请求
+python-dotenv>=1.0.0
+requests>=2.32.0
+
+# 可选：异步http客户端，调用模型接口更快
+httpx>=0.27.0
