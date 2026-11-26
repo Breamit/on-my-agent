@@ -3,15 +3,28 @@ fastapi>=0.110.0
 uvicorn[standard]>=0.29.0
 pydantic>=2.0.0
 pydantic-settings>=2.0.0
+python-multipart>=0.0.9        # 表单登录、文件上传
+sse-starlette>=2.1.0           # 流式对话 SSE
 
-# MySQL 同步，如果你想用异步就换成 aiomysql
-pymysql>=1.1.0
+# 认证与安全
+PyJWT>=2.9.0                   # JWT 签发与校验
+bcrypt>=4.1.2                  # 密码哈希
+cryptography>=42.0.0           # 用户 API KEY 加密存储（AES-GCM）
+
+# MySQL 同步
+pymysql>=1.1.0                 # 同步场景 / 初始化脚本
+aiomysql>=0.2.0                # FastAPI 异步访问 MySQL
+greenlet>=3.0.0                # SQLAlchemy 异步依赖
 sqlalchemy>=2.0.0
 
 # LangChain 外部API调用
 langchain>=0.2.0
 langchain-community>=0.2.0
-langchain-openai>=0.1.0
+langchain-openai>=0.1.0        # 兼容 OpenAI 协议的模型（含自定义 base_url）
+tiktoken>=0.7.0                # token 计数与上下文裁剪
+
+# 工作区文件读写
+aiofiles>=24.1.0
 
 # 环境变量、请求
 python-dotenv>=1.0.0

@@ -1,0 +1,5 @@
+# 开发与测试依赖
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx>=0.27.0
+aiosqlite>=0.20.0  # 本地没有 MySQL 时用于跑测试
